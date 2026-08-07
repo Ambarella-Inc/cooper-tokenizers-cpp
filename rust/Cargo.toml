@@ -1,3 +1,8 @@
+# Modified by Ambarella International LP. in 2026.
+# Changes: updated tokenizers to 0.20.1 and added lazy_static.
+# Based on tokenizers-cpp commit
+# 0621f84c1aed671d97cfd6eddd127809a20bc94f.
+
 [package]
 name = "tokenizers-c"
 version = "0.1.0"
@@ -8,6 +13,8 @@ crate-type = ["staticlib"]
 
 [dependencies]
 
-tokenizers = { version = "0.20.0", default-features = false, features = ["onig"] }
+tokenizers = { version = "0.20.1", default-features = false, features = ["onig"] }
+
 serde = { version = "1.0", features = [ "derive" ] }
 serde_json = "1.0"
+lazy_static = "1.5"
